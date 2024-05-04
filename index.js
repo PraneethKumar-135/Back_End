@@ -8,7 +8,7 @@ const app = express();
 
 
 
-port = 1351;
+port = process.env.PORT || 1351;
 app.listen(port, () => { console.log(`Port Running on ${port} `); });
 
 
