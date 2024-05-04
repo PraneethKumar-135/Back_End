@@ -1,24 +1,14 @@
-// const client = require("./connection.js");
+const client = require("./connection.js");
 const express = require("express");
+// require("dotenv").config();
 
 
 const app = express();
-const { Client } = require("pg");
-require("dotenv").config();
 
 
 
-const client = new Client({
-    host: process.env.HOST,
-    user: process.env.USER,
-    database: process.env.DATABASE,
-    port: process.env.PORT,
-    password: process.env.PASSWORD,
-});
 
-
-
-port = process.env.PORT || 1351;
+port = 1351;
 app.listen(port, () => { console.log(`Port Running on ${port} `); });
 
 
